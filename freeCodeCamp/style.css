@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* to enable flexbox, set the display property to flex inside the container. By setting the display property to flex in the parent container, the child elements have become the flex items.*/
+.container{
+    background-color: #cacaca;
+    padding: 15px;
+    margin: 50px;
+    display: flex;
+}
+.item{
+    background-color: #c1032c;
+    color: #fff;
+    font-size: 35px;
+    padding: 20px;
+    margin: 10px;
+}

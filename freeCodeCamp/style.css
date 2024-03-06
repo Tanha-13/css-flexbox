@@ -4,16 +4,21 @@
     box-sizing: border-box;
 }
 /* to enable flexbox, set the display property to flex inside the container. By setting the display property to flex in the parent container, the child elements have become the flex items.*/
+/* topic: flex-direction
+- flex direction property is used to find the direction of the flex items within the container. By default, the flex direction is set to row. The values are - row,row-reverse,column,column-reverse.
+imp: if the flex direction is set to row, the main axis would be the x axis. If the flex direction is set to column, the main axis would be the y axis.
+ */ 
 .container{
     background-color: #cacaca;
     padding: 15px;
-    margin: 50px;
+    margin: 30px;
     display: flex;
+    flex-direction: column;
 }
 .item{
     background-color: #c1032c;
     color: #fff;
-    font-size: 35px;
+    font-size: 20px;
     padding: 20px;
     margin: 10px;
 }

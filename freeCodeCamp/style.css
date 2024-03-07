@@ -8,17 +8,42 @@
 - flex direction property is used to find the direction of the flex items within the container. By default, the flex direction is set to row. The values are - row,row-reverse,column,column-reverse.
 imp: if the flex direction is set to row, the main axis would be the x axis. If the flex direction is set to column, the main axis would be the y axis.
  */ 
+ /* topic: justify-content 
+  this property defines how the flex items should be stacked along the main axis. The values are -
+  i. center: all the flex items/elements are stacked in the center.
+  ii. space-between:
+  iii. space-around: 
+  iv. space-evenly: 
+  v. flex-start
+  vi. flex-end 
+ */
+ /* topic: align items 
+  - this property aligns the flex items along the cross axis. 
+     flex-start, center, space-between, space-around, space-evenly, stretch, flex-end, baseline.
+ */
+ 
 .container{
-    background-color: #cacaca;
+    background-color: #cacaca; 
     padding: 15px;
-    margin: 30px;
+    margin: 50px;
     display: flex;
+    height: 70vh;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 .item{
     background-color: #c1032c;
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     padding: 20px;
     margin: 10px;
 }
+/* all the flex items will get this height because align items value is stretch. */
+/* .items-3{
+    height: 150px;
+}
+
+.items-4{
+    font-size: 60px;
+} */

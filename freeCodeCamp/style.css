@@ -10,40 +10,79 @@ imp: if the flex direction is set to row, the main axis would be the x axis. If 
  */ 
  /* topic: justify-content 
   this property defines how the flex items should be stacked along the main axis. The values are -
-  i. center: all the flex items/elements are stacked in the center.
-  ii. space-between:
-  iii. space-around: 
-  iv. space-evenly: 
-  v. flex-start
-  vi. flex-end 
+  i. center: all the flex items/elements are stacked in the center. This value aligns the flex items in the center of the container.
+  ii. space-between: The space between the flex items is evenly distributed.Flexbox automatically calculates the distance and distribute the space. It adjusts the space distribution according to devices. So, it helps to create a responsive layout.
+  iii. space-around: the space around each item is the same on the left and the right side.
+  iv. space-evenly: the space between the items is always the same on both the sides.
+  v. flex-start: default value. 
+  vi. flex-end: 
  */
  /* topic: align items 
-  - this property aligns the flex items along the cross axis. 
+  - this property aligns the flex items along the cross axis. The default value is stretch. It stretch the height of all the flex items to match the height of the tallest flex item. If the container has fixed height, the flex items will stretch to match that height. 
      flex-start, center, space-between, space-around, space-evenly, stretch, flex-end, baseline.
+
  */
+
+ /* topic: align self
+  - similar to align-items property. align-items property aligns all the flex items whereas align-self aligns one single flex item along the cross axis. It can override the align-items property.
+  values are - flex-start, flex-end, center, auto, stretch, 
+  */
+  /* topic:order 
+  - is used to change the position of flex items within the container. Initial value of order is zero(0). order property will be handy to relocate the portion of the elements when it comes to responsive design. Negative values can be used but not recommended.*/
+
+  /* topic: flex-grow
+  - flex-grow property enables the items to grow.  */
+
+  /* topic: flex-basis
+  -  it will set the width of a flex item. Instead of using the width property, we can use the flex basis. Using the flex basis or width, both are same. It accepts percentage based values or pixel based value.*/
+
+
+  /* topic:flex
+  - shorthand property of flex-grow(required), flex-shrink, and flex-basis. */
  
 .container{
     background-color: #cacaca; 
     padding: 15px;
     margin: 50px;
     display: flex;
-    height: 70vh;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+    /* height: 70vh; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .item{
     background-color: #c1032c;
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
     padding: 20px;
     margin: 10px;
+    /* flex-grow: 1; here all the items are occupying the maximum space available inside the container. */
+    /* flex: 1; */
 }
 /* all the flex items will get this height because align items value is stretch. */
-/* .items-3{
-    height: 150px;
+.items-1{
+    /* order: 3; */
+}
+.items-2{
+    /* order: 4; */
+}
+.items-3{
+    /* height: 80vh;  used to experiment align items property */
+    /* order: 0;  the default position is 0. It will be first child/item.*/
+    /* align-self: flex-end; it will align the item to the end of the container along the cross axis.*/
 }
 
 .items-4{
+    /* align-self: flex-start; aligns the item to the top*/
+    /* order: 1; */
+    /* flex-grow: 3;  it will grow 3 times than the other items.*/
+}
+.items-5{
+    /* order: 2; */
+    /* flex:5; if any item has flex, it will automatically take all the available space. If any value is fixed for flex property, then it will calculate its space relatively. */
+}
+
+
+/* .items-4{
     font-size: 60px;
 } */

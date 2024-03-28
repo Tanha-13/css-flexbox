@@ -22,6 +22,11 @@ imp: if the flex direction is set to row, the main axis would be the x axis. If 
      flex-start, center, space-between, space-around, space-evenly, stretch, flex-end, baseline.
 
  */
+ /* topic: flex-wrap
+ - the default of this property is nowrap. */
+
+ /* topic: align-content
+ -  aligns the row in the cross axis into the container.*/
 
  /* topic: align self
   - similar to align-items property. align-items property aligns all the flex items whereas align-self aligns one single flex item along the cross axis. It can override the align-items property.
@@ -31,11 +36,13 @@ imp: if the flex direction is set to row, the main axis would be the x axis. If 
   - is used to change the position of flex items within the container. Initial value of order is zero(0). order property will be handy to relocate the portion of the elements when it comes to responsive design. Negative values can be used but not recommended.*/
 
   /* topic: flex-grow
-  - flex-grow property enables the items to grow.  */
+  - flex-grow property enables the items to grow. By default, it is set to one which mean it will shrink the flex items at a point. */
 
   /* topic: flex-basis
   -  it will set the width of a flex item. Instead of using the width property, we can use the flex basis. Using the flex basis or width, both are same. It accepts percentage based values or pixel based value.*/
 
+  /* topic: flex-shrink
+  - this property has only two value 0 and 1. */
 
   /* topic:flex
   - shorthand property of flex-grow(required), flex-shrink, and flex-basis. */
@@ -45,10 +52,13 @@ imp: if the flex direction is set to row, the main axis would be the x axis. If 
     padding: 15px;
     margin: 50px;
     display: flex;
-    /* height: 70vh; */
+    height: 70vh;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: flex-start;
+    
 }
 .item{
     background-color: #c1032c;
@@ -57,7 +67,8 @@ imp: if the flex direction is set to row, the main axis would be the x axis. If 
     padding: 20px;
     margin: 10px;
     /* flex-grow: 1; here all the items are occupying the maximum space available inside the container. */
-    /* flex: 1; */
+    flex: 1;
+    /* flex-basis: 15%; all the items will get 15% of the available space. */
 }
 /* all the flex items will get this height because align items value is stretch. */
 .items-1{
@@ -65,6 +76,8 @@ imp: if the flex direction is set to row, the main axis would be the x axis. If 
 }
 .items-2{
     /* order: 4; */
+    /* flex-basis: 75%;
+    flex-shrink: 0; */
 }
 .items-3{
     /* height: 80vh;  used to experiment align items property */

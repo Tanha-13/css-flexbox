@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Properties</title>
+    <style>
+        .flex-container{
+            display: flex;
+            column-gap: 20px;
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .items{
+            flex-basis: 200px;
+            height: 200px;
+            background-color: chocolate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 40px;
+            flex-grow: 1;
+        }
+        .item-1{
+            order: 1;
+        }
+        .item-2{
+            order: 0;
+        }
+        .item-3{
+            order: 3;
+            flex-grow: 2;
+            flex-shrink: 1;
+            align-self: flex-end;
+        }
+        .item-4{
+            order: 4;
+        }
+        .item-5{
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <div class="items item-5">5</div>
+    </div>
+
+    <!-- 
+        order: The order property defines the order of the flex items. It is used to change the position of flex items within the flex container. Default/Initial value is 0. order property will be handy to relocate the portion of the elements when it comes to responsive design. Negative values can be used but not recommended.
+
+        flex-grow: flex-grow property specifies how much a flex item will grow relative to the rest of the flex items when there is extra space in the space container. The default value is 0 and negative numbers are invalid.
+
+        flex-shrink: flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items when there is not enough space in the space container. It has only two values 1(default) and 0 ( the item will not shrink). Negative numbers are invalid.
+
+        flex-basis: The flex-basis property specifies the initial main size of a flex item before any remaining space is distributed according to flex-grow or flex-shrink. It can be a length or a keyword(auto,content). The default value is auto. Instead of using the width property, we can use the flex basis. Using the flex basis or width, both are same.
+
+        flex: shorthand property - flex-grow | flex-shrink | flex-basis
+
+        align-self: This allows the default alignment to be overridden for individual flex items. The values are -
+            1. auto
+            2. flex-start
+            3. flex-end
+            4. center
+            5. baseline
+            6. stretch
+     -->
+</body>
+</html>

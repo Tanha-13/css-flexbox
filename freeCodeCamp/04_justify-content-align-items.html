@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justify Content and Align items</title>
+    <style>
+      .flex-container {
+        display: flex;
+        height: 90vh;
+        column-gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      .flex-items{
+        width: 300px;
+        height: 300px;
+        background-color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-items flex-item-1"></div>
+      <div class="flex-items flex-item-2"></div>
+      <div class="flex-items flex-item-3"></div>
+      <div class="flex-items flex-item-4"></div>
+      <div class="flex-items flex-item-5"></div>
+    </div>
+
+
+    <!-- 
+        Justify-content: defines the alignment of the flex items along the main axis.
+
+        01. flex-start(default): aligns items to the start of the main axis. 
+          -- if flex-direction is row, items are aligned to the left.
+          -- if flex-direction is column, items are aligned to the top.
+          
+        02. flex-end: aligns items to the end of the main axis.
+          -- if flex-direction is row, items are aligned to the right.
+          -- if flex-direction is column, items are aligned to the bottom.
+
+        03. center: all the flex items/elements are stacked in the center. This value aligns the flex items in the center of the container with equal space on either side.
+
+        04. space-between: The space between the flex items is evenly distributed, first item is on the start line and last item is on the end line and the remaining items are spaced evenly in between. Flexbox automatically calculates the distance and distribute the space. It adjusts the space distribution according to devices. So, it helps to create a responsive layout.
+            distributes items evenly along the main axis.
+
+        05. space-around: items are evenly distributed in the line with equal space around them. The space around each item is the same on the left and the right side.
+          distributes items evenly along the main axis with equal space around each item.
+          the space between the items is twice as large as the space between the items and the the edges.
+          
+        06. space-evenly: distributes items evenly along the main axis with equal space around each item. The spaces between the items and the edges are equal.
+
+        start, end, left, right
+     -->
+     <!-- 
+      align-items: this property aligns the flex items along the cross axis. The default value is stretch. It stretch the height of all the flex items to match the height of the tallest flex item. If the container has fixed height, the flex items will stretch to match that height.
+
+      01. stretch(default): stretches the flex items to fill the container.
+      02. flex-start/start/self-start: items are placed at the start of the cross axis.
+      03. flex-end/end/self-end: items are placed at the end of the cross axis.
+      04. center: items are centered
+      05. baseline
+      -->
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Direction</title>
+    <style>
+        .flex-container-row{
+            display: flex;
+            /* this is default(left to right in ltr). The main axis is horizontal and the cross axis is vertical. */
+            flex-direction: row; 
+            gap: 20px;
+        }
+        .row-items{
+            width: 300px;
+            height: 200px;
+            background-color: #ba1032;
+            color: #fff;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .flex-container-2{
+            display: flex;
+            /* it sets the main axis to vertical. */
+            flex-direction: column;
+            gap: 20px;
+        }
+        .column-items{
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+            padding: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .flex-container-1>.flex-items.flex-item-$*5{Item-$} -->
+    <div class="flex-container-row">
+        <div class="row-items row-item-1">Item-1</div>
+        <div class="row-items row-item-2">Item-2</div>
+        <div class="row-items row-item-3">Item-3</div>
+        <div class="row-items row-item-4">Item-4</div>
+        <div class="row-items row-item-5">Item-5</div>
+    </div>
+    <div class="flex-container-2">
+        <div class="column-items column-item-1">Item-1</div>
+        <div class="column-items column-item-2">Item-2</div>
+        <div class="column-items column-item-3">Item-3</div>
+        <div class="column-items column-item-4">Item-4</div>
+        <div class="column-items column-item-5">Item-5</div>
+    </div>
+
+    <!-- Flex direction property is used to find the direction of the flex items within the container. Flex-direction establishes the main axis, defines the direction flex items are placed in the flex container. By default, the flex-direction property is set to row.
+        
+        01. row(default): left to right in ltr. the main axis is x-axis.
+        02. row-reverse: right to left in ltr.
+        03. column: top to bottom. the main axis is y-axis.
+        04. column-reverse: bottom to top.
+     -->
+</body>
+</html>

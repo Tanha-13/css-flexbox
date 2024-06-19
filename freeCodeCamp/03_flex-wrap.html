@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        .flex-container{
+            display: flex;
+            gap: 20px;
+            /* flex-wrap: nowrap; - default*/
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+        }
+        .flex-items{
+            width: 300px;
+            height: 200px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-items">Item-1</div>
+        <div class="flex-items">Item-2</div>
+        <div class="flex-items">Item-3</div>
+        <div class="flex-items">Item-4</div>
+        <div class="flex-items">Item-5</div>
+        <div class="flex-items">Item-6</div>
+        <div class="flex-items">Item-7</div>
+        <div class="flex-items">Item-8</div>
+        <div class="flex-items">Item-9</div>
+        <div class="flex-items">Item-10</div>
+
+        <!-- 
+            By default, flex items will all try to fit onto one line. 
+            Flex wrap defines the arrangement of flex items in a row that should wrap or not. 
+
+            01. nowrap(default) : all flex items will be on one line.
+            02. wrap: flex items will wrap onto multiple lines, from top to bottom.
+            03. wrap-reverse: flex items will wrap onto multiple lines from bottom to top. 
+         -->
+    </div>
+</body>
+</html>
